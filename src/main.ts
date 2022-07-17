@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import { createWebHistory } from "vue-router";
-import "./registerServiceWorker";
 import Vant from "vant";
 import App from "./App.vue";
 import createRouter from "./router";

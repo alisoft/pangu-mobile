@@ -2,7 +2,7 @@
   "name": "@pangu/mobile",
   "version": "0.1.0",
   "scripts": {
-    "build": "rimraf ../../dist/mobile/* && npm run build:client && npm run build:node",
+    "build": "rimraf ../../dist/mobile/* && pnpm build:client && pnpm build:node",
     "build:client": "cross-env DOCKER_BUILD=1 vue-cli-service build --dest ../../dist/mobile/client",
     "build:node": "cross-env SSR=1 vue-cli-service build --dest ../../dist/mobile/node",
     "lint": "vue-cli-service lint",
