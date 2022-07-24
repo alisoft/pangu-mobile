@@ -5,12 +5,13 @@ import vue from "@vitejs/plugin-vue";
 import vueJsx from "@vitejs/plugin-vue-jsx";
 import legacy from "@vitejs/plugin-legacy";
 import vitePluginAliOss from "vite-plugin-ali-oss";
+const pkgVersion = require('./package.json').version;
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode, ssrBuild }) => {
   const env = loadEnv(mode, process.cwd(), "");
   return {
-    base: !ssrBuild ? env.PUBLIC_URL : "/",
+    base: !ssrBuild ? `${env.PUBLIC_URL}${pkgVersion}/` : "/",
     build: {
       assetsDir: "mobile-assets",
     },
