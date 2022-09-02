@@ -1,6 +1,6 @@
 {
   "name": "@pangu/mobile",
-  "version": "0.1.2",
+  "version": "0.1.2-alpha.1",
   "scripts": {
     "dev": "vite",
     "build": "rimraf ../../dist/mobile/* && yarn build:client && yarn build:server",
