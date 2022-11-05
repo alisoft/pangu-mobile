@@ -11,7 +11,7 @@ const pkgVersion = require('./package.json').version;
 export default defineConfig(({ mode, ssrBuild }) => {
   const env = loadEnv(mode, process.cwd(), "");
   return {
-    base: !ssrBuild ? `${env.PUBLIC_URL}${pkgVersion}/` : "/",
+    base: !ssrBuild ? `${env.PUBLIC_URL}/${pkgVersion}/` : "/",
     build: {
       assetsDir: "mobile-assets",
     },
